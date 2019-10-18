@@ -1,0 +1,339 @@
+/* VARIABLES */
+$regular : FiraSans-Light;
+$bold : FiraSans-Medium;
+
+$darkgrey : #464646;
+$lightgrey : #eaeaea;
+
+
+
+/*GENERAL*/
+
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: $lightgrey;
+  padding-top: 7%;
+
+  #site_content{
+    flex: 1;
+  }
+}
+
+
+
+/*MENU & FOOTER*/
+
+header {
+  position: absolute;
+  top: 0;
+
+      .menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: fixed;
+        left: 0;
+        z-index: 2000;
+      }
+}
+
+nav ul {
+  width: 98.5vw;
+  background-color: $darkgrey;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 7vw;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.5rem;
+
+  font-family: $regular;
+  font-size: 0.9rem;
+  color: white;
+}
+
+nav li a {
+  display: block;
+  text-decoration: none;
+  padding: 5px;
+
+  font-family: $regular;
+  font-size: 0.9rem;
+  color: white;
+
+  .monogramme {
+    width: 1.7rem;
+    margin: -0.5rem;
+    padding: -0.5rem;
+  }
+}
+
+
+footer {
+  margin-top: 8vw;
+  transform: translateY(-2.6rem);
+}
+
+// ANIMATION DU SURLIGNAGE MENU A REFAIRE
+
+// @keyframes surlignage {
+//   0% {
+//     width: 0%;
+//     background-color: black;
+//   }
+//
+//   100% {
+//     width: 100%;
+//     background-color: black;
+//   }
+// }
+//
+// .category:hover {
+//   font-family: $regular;
+//   font-size: 0.9rem;
+//   color: white;
+//   text-decoration: none;
+//   animation: surlignage 1s;
+//   animation-fill-mode: forwards;
+// }
+
+
+
+    /*IMAGE D'ACCEUIL*/
+
+.home {
+	/*width: 100%;*/
+	height: 90vh;
+	background-image: url("../images/home/home_background.png");
+  top: 10vh;
+
+      .mon_nom {
+      	position: relative;
+      	top: 35%;
+      	left: 5%;
+
+      	font-size: 450%;
+      	font-family: $bold;
+      	color: white;
+      }
+
+      hr {
+      	position: relative;
+      	top: 40%;
+      	left: 7%;
+
+      	border: 1px solid white;
+      }
+
+      .mes_diplomes {
+      	position: relative;
+      	top: 45%;
+      	left: 5%;
+        line-height: 1.3rem;
+
+      	font-size: 100%;
+      	font-family: $regular;
+      	color: white;
+      }
+}
+
+
+
+/*POUR LES VIGNETTES DE LA PAGE D'ACCEUIL*/
+
+@media (min-width: 768px) {
+  figure {
+    width: 23vw;
+    height: 23vw;
+    background-image:url("../images/home/fond_blanc.png");
+    margin-top:3rem;
+
+        .vignettes {
+        width: 20vw;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        }
+  }
+}
+
+@media (max-width: 768px) {
+  figure {
+    height:95vw;
+    background-image:url("../images/home/fond_blanc.png");
+    margin-top:1.5rem;
+    margin-bottom:1.5rem;
+
+        .vignettes {
+        width: 90%;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        }
+  }
+}
+
+
+
+
+    /* PAGES PROJET */
+
+/*TITRE*/
+
+//DESKTOP
+@media (min-width: 768px) {
+  .titre {
+    font-family: $bold;
+    font-size: 3rem;
+    color: $darkgrey;
+    transform-origin: 0 0;
+    transform: rotate(-90deg);
+    position: fixed;
+    top: 90%;
+    left: 2vw;
+  }
+}
+
+//MOBILE
+@media (max-width: 768px) {
+  .titre {
+    font-family: $bold;
+    font-size: 3rem;
+    color: $darkgrey;
+    text-align: center;
+
+    padding-top: 25%;
+    padding-bottom: 5%;
+  }
+}
+
+
+
+
+/*VISUEL PRINCIPAL + EXPLICATIONS*/
+
+// DESKTOP
+ @media (min-width: 1200px) {
+  section {
+    position: relative;
+    left: 3vw;
+    top: 5vw;
+    margin-bottom: 4vw;
+
+        .big_img {
+          width: 45vw;
+        }
+
+        .description {
+          font-family: $regular;
+          font-size: 1vw;
+          line-height: 1.1rem;
+
+              em {
+                font-weight: bold;
+              }
+        }
+  }
+
+  .debut {
+    // margin-top: 10%;
+    position: absolute;
+    bottom: 75%
+  }
+
+  .milieu {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .align-right {
+    text-align: right;
+  }
+
+  .fin {
+    position: absolute;
+    bottom: 0;
+  }
+
+
+  .small_img {
+    width: 20vw;
+    margin: 5%;
+    margin-left: 0;
+  }
+}
+
+
+// TABLET
+ @media (min-width: 768px) and (max-width: 1200px) {
+  section {
+    position: relative;
+    left: 5vw;
+    top: 8vw;
+    margin-bottom: 4vw;
+
+        .big_img {
+          width: 100%;
+        }
+
+        .description {
+          font-family: $regular;
+          font-size: 1.2vw;
+          line-height: 1rem;
+          margin-bottom: 3vw
+        }
+  }
+
+
+
+  .small_img {
+    width: 20vw;
+    margin: 5%;
+    margin-left: 0;
+  }
+}
+
+
+// MOBILE
+@media (max-width: 768px) {
+  section {
+    margin-bottom: 4vw;
+
+        .big_img {
+          width: 80vw;
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+          margin-bottom: 10%;
+        }
+
+        .description {
+          font-family: $regular;
+          margin-left: 5%;
+          margin-right: 5%;
+          margin-bottom: 5%;
+          font-size: 3vw;
+          line-height: 2.1rem;
+
+              em {
+                font-weight: bold;
+              }
+        }
+  }
+
+  .small_img {
+    width: 80vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 5%;
+  }
+}
